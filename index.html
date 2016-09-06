@@ -1,0 +1,77 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Bat Cave</title>
+  <meta name="description" content="Boiling Frog">
+
+  <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+  <script src="bundle.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+
+  <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
+
+</head>
+<body>
+
+
+<a-scene fog="type: linear; density: .8; color: #000000; far: 30; near: 10">
+  <a-assets>
+    <img id="eyes" src="eyes.jpg">
+
+  </a-assets>
+  <a-entity position="0 1.8 9.5">
+    <a-camera></a-camera>
+  </a-entity>
+  <a-sky color="black"></a-sky>
+
+  <a-curvedimage src="beach.jpg" position="0 0 -22" height="20" radius="8.7" theta-length="180"
+                 rotation="0 100 0" scale="1.8 1.8 1.8"></a-curvedimage>
+
+  <a-plane color="black" height="100" width="100" position="0 2 -19" side="back" rotation="-180 0 0"
+           width="2"></a-plane>
+
+
+  <a-ocean width="100" depth="100" density="1" opacity="1" position="0 -2 0"
+           ocean="width:50;depth:50;density:1;opacity:1;" material="color: #01085A" rotation="-90 0 0"></a-ocean>
+
+  <a-entity id="script"
+            sound="src: ambiencecave.mp3; autoplay: true; loop: true; volume: 4;"></a-entity>
+
+  <a-entity id="pot-banging"
+            sound="src: bats.mp3; autoplay: false; loop: true; volume: 1;"></a-entity>
+
+  <a-entity id="frog-sound"
+            sound="src:echocave.mp3; autoplay: false; loop: true; volume: 1;"></a-entity>
+
+
+  <a-cylinder color="#F7E702" height="3" radius="3.5" position="0 -1 -20" rotation="90 0 0"></a-cylinder>
+
+
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="2 20 2" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="1 20 12" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="5 20 -2" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-2 20 4" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="6 20 9" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="10 20 1" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-12 20 2" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-20 20 -12" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="4 20 -13" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="8 20 -4" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-4 20 -7" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-10 20 10" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-28 20 -19" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="23 20 6" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="29 20 -9" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-25 20 18" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-28 20 -18" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-18 20 -29" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="3 20 26" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="9 20 -29" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-15 20 28" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-5 20 -28" rotation="90 0 0"></a-entity>
+
+</a-scene>
+</body>
+<script src="app.js"></script>
+
+</html>
