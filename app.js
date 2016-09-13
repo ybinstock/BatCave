@@ -3,7 +3,8 @@ $(document).ready(function() {
   var script = document.querySelector('#script');
   var potBanging = document.querySelector('#pot-banging');
   var frog = document.querySelector('#frog-sound');
-  var eyes= document.querySelector('#eyes')
+  var eyes= document.querySelector('#eyes');
+  var flyingbats = document.querySelector('#bats');
 
 
 //for script
@@ -27,6 +28,12 @@ $(document).ready(function() {
     frog.play();
   }
   setTimeout(playFrogs, 2000);
+
+  flyingbats.pause();
+  function playBats() {
+    flyingbats.play();
+  }
+  setTimeout(playBats, 2000);
 
   //function toggleEyes() {
   //  if (x )
