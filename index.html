@@ -7,22 +7,20 @@
   <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
   <script src="bundle.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
-
   <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
 
 </head>
 <body>
 
 
-<a-scene fog="type: linear; density: .9; color: #000000; far: 30; near: 10">
+<a-scene fog="type: linear; density: .9; color: #000000; far: 30; near: 20">
 
 
   <a-assets>
     <img id="eyes" src="eyes.jpg">
-    <!--<video id="beach" src="BeachVideo.mp4"> </video>-->
   </a-assets>
 
-  <a-entity light="type: hemisphere; groundColor: white; intensity: 2" position="0 1 -89"></a-entity>
+  <a-entity light="type: hemisphere; groundColor: white; intensity: 2" position="0 1 -19"></a-entity>
 
 
   <a-entity position="0 1.8 7.5">
@@ -31,7 +29,10 @@
 
   <a-sky color="black"></a-sky>
 
-  <a-videosphere webkit-playsinline src="BeachVideo.mp4" position="0 -8 0 "></a-videosphere>
+
+  <a-plane src="sand.jpg" width="25" height="15" position="0 -2 -27" rotation="-90 0 0"></a-plane>
+
+  <a-plane src="cloud.jpg" width="25" height="15" position="0 14 -27" rotation="90 0 0"></a-plane>
 
   <!--instructions-->
   <a-entity id="instructions">
@@ -46,11 +47,16 @@
                  rotation="0 100 0" scale="1.8 1.8 1.8"></a-curvedimage>
 
   <a-entity geometry="primitive: plane; height: 100; width: 100;" position="0 2 -19" rotation="-180 0 0"
-           material="opacity: .9; transparent: true; color:black; side: back"></a-entity>
+            material="opacity: .9; transparent: true; color:black; side: back"></a-entity>
 
+  <a-entity geometry="primitive: plane; height: 100; width: 100;" position="0 2 -19.5" rotation="-180 0 0"
+            material="color:black;"></a-entity>
 
   <a-ocean width="54" depth="40" density="2" opacity=".5" position="0 -2 0"
            ocean="width:54;depth:40;density:2;opacity:.5;" material="color: #01085A" rotation="-90 0 0"></a-ocean>
+
+  <a-entity geometry="primitive: plane" material="color: blue"
+            position="0 -5 -20" sound="src: waves.mp3; autoplay: true;  volume: 6"></a-entity>
 
   <a-entity id="script"
             sound="src: ambiencecave.mp3; autoplay: true; loop: true; volume: 4;"></a-entity>
@@ -65,7 +71,8 @@
             sound="src:flyingbats.mp3; autoplay: false; loop: true; volume: 2;"></a-entity>
 
   <!--portal-->
-  <a-entity geometry="primitive: cylinder; height:.2; radius:3.5;"  position="0 -1 -19" rotation="90 0 0" material="opacity: .2; transparent: true; color:#F7E702"></a-entity>
+  <a-entity geometry="primitive: cylinder; height:.2; radius:3.5;" position="0 -1 -19" rotation="90 0 0"
+            material="opacity: .2; transparent: true; color:#F7E702"></a-entity>
 
 
   <a-entity geometry="primitive: plane" material="src: #eyes" position="2 20 2" rotation="90 0 0"></a-entity>
@@ -85,11 +92,11 @@
   <a-entity geometry="primitive: plane" material="src: #eyes" position="29 20 -9" rotation="90 0 0"></a-entity>
   <a-entity geometry="primitive: plane" material="src: #eyes" position="-25 20 18" rotation="90 0 0"></a-entity>
   <a-entity geometry="primitive: plane" material="src: #eyes" position="-28 20 -11" rotation="90 0 0"></a-entity>
-  <a-entity geometry="primitive: plane" material="src: #eyes" position="-18 20 -29" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-18 20 -4" rotation="90 0 0"></a-entity>
   <a-entity geometry="primitive: plane" material="src: #eyes" position="3 20 26" rotation="90 0 0"></a-entity>
   <a-entity geometry="primitive: plane" material="src: #eyes" position="9 20 -29" rotation="90 0 0"></a-entity>
   <a-entity geometry="primitive: plane" material="src: #eyes" position="-15 20 28" rotation="90 0 0"></a-entity>
-  <a-entity geometry="primitive: plane" material="src: #eyes" position="-5 20 -28" rotation="90 0 0"></a-entity>
+  <a-entity geometry="primitive: plane" material="src: #eyes" position="-5 20 -2" rotation="90 0 0"></a-entity>
 
 </a-scene>
 </body>
